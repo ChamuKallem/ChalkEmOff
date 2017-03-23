@@ -38,9 +38,7 @@ describe 'user_tests', type: :request do
           client_id = response.headers['client']
           token = response.headers['access-token']
           uid = response.headers['uid']
-          puts client_id
-          puts token
-          puts uid
+          
           #delete
           delete destroy_user_session_path(:uid => uid, :client => client_id, :'access-token' => token)
           expect(response).to be_success
