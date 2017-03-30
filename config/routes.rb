@@ -4,6 +4,10 @@ Rails.application.routes.draw do
   scope module: 'api' do
     namespace :v1 do
       resources :users, only: [:index, :show]
+      resources :todos do
+        resources :items, only: [:index, :create]
+      end
+      resources :items, only: [:show, :destroy, :update]
     end
   end
 end
