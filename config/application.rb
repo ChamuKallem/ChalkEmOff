@@ -31,7 +31,7 @@ module ChalkEmOff
         origins '*'
         resource '*',
           :headers => :any,
-          :expose  => ['access-token', 'token-type', 'uid', 'client', 'expiry'],
+          # :expose  => ['access-token', 'token-type', 'uid', 'client', 'expiry'],
           :methods => [:get, :post, :put, :delete, :options]
       end
     end
