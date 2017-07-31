@@ -30,7 +30,7 @@ module ChalkEmOff
     config.middleware.insert_before 0, Rack::Cors do
       allow do
         origins '*'
-        resource '/*',
+        resource '*',
           :headers => :any,
           :expose  => ['access-token', 'token-type', 'uid', 'client', 'expiry'],
           :methods => [:get, :post, :put, :delete, :options]
